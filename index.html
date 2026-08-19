@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LETS - ローカルファイルを爆速＆スマートに全文検索</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --accent: #38bdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            letter-spacing: 2px;
+        }
+
+        .hero {
+            max-width: 900px;
+            margin: 4rem auto;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-sub);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .features {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--accent);
+        }
+
+        .feature-card p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        .supported-formats {
+            max-width: 1000px;
+            margin: 6rem auto;
+            padding: 2rem 1rem;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .supported-formats h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+
+        .tag {
+            background-color: #334155;
+            color: var(--accent);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-sub);
+            border-top: 1px solid #1e293b;
+            margin-top: 6rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">LETS</div>
+        <a href="https://github.com/ユーザー名/リポジトリ名/releases" class="cta-btn" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">ダウンロード</a>
+    </header>
+
+    <section class="hero">
+        <h1>ローカルファイルを、<br>一瞬でフルテキスト検索。</h1>
+        <p>Office文書、PDF、ソースコードから画像内テキスト(OCR)まで。<br>PC内の「あのファイルどこだっけ？」を完全にゼロにします。</p>
+        <a href="https://github.com/ユーザー名/リポジトリ名/releases" class="cta-btn">最新版をダウンロード（無料）</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>爆速の並列スキャン</h3>
+            <p>複数ドライブの並列探索処理により、大容量のストレージでもストレスフリーな検索スピードを実現します。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h3>OCR（光学文字認識）対応</h3>
+            <p>Windows標準の言語エンジンを搭載。テキストデータを持たないスキャン画像型PDF内の文字も検索対象にします。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>表記揺れに強い正規化</h3>
+            <p>全角/半角、ひらがな/カタカナ、大文字/小文字の違いを賢く吸収。正確なキーワード指定でなくてもしっかりヒットします。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <h3>柔軟な日付・拡張子フィルター</h3>
+            <p>「今日」「直近1週間」などのワンクリック指定や、Word/Excel/コードといったカテゴリ別の拡張子絞り込みに対応。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">👁️</div>
+            <h3>スニペット表示＆即時アクセス</h3>
+            <p>ヒットしたテキストの前後文脈をプレビュー確認可能。目的のファイルやフォルダを直接エクスプローラーで開けます。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔓</div>
+            <h3>使用中ファイルも検索OK</h3>
+            <p>他アプリで開いている最中の文書でも排他ロックを回避してスムーズに読み込み・検索を実行します。</p>
+        </div>
+    </section>
+
+    <section class="supported-formats">
+        <h2>対応フォーマット</h2>
+        <div class="tags">
+            <span class="tag">Word (.docx)</span>
+            <span class="tag">Excel (.xlsx)</span>
+            <span class="tag">PowerPoint (.pptx)</span>
+            <span class="tag">PDF (.pdf / OCR対応)</span>
+            <span class="tag">Text (.txt / .md)</span>
+            <span class="tag">Source Code (.cs / .js / .py / .php / .html / .css)</span>
+            <span class="tag">Data (.json / .xml / .yaml / .sql / .log)</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; LETS App. Developed with C# / .NET 8 & WPF</p>
+    </footer>
+
+</body>
+</html>
